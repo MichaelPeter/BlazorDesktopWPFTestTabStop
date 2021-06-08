@@ -13,6 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -26,7 +27,7 @@
                 <ComboBoxItem>Item 6</ComboBoxItem>
             </ComboBox>
             <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Text="Button Tab Index: " />
-            <Button TabIndex="0"  Margin="2,5,0,5">ButtonTabIdx3</Button>
+            <Button TabIndex="0"  Margin="2,5,0,5">ButtonTabIdx0</Button>
         </StackPanel>
         
         <blazor:BlazorWebView TabIndex="1" IsTabStop="True" Grid.Row="1" HostPage="wwwroot/index.html" Services="{StaticResource services}">
@@ -34,5 +35,10 @@
                 <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:Counter}" />
             </blazor:BlazorWebView.RootComponents>
         </blazor:BlazorWebView>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button TabIndex="5" Margin="5,2,5,2" Width="50">Tab5</Button>
+            <Button TabIndex="4" Margin="5,2,5,2" Width="50">Tab4</Button>
+        </StackPanel>
     </Grid>
 </Window>
